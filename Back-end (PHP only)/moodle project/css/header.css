@@ -1,0 +1,167 @@
+/* Header Section */
+
+header {
+    position: fixed;
+    width: 100%;
+    background-color: #d0c493;
+    height: auto;
+    overflow: hidden;
+    z-index: 10000;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4px;
+    transition: all 0.5s ease 0.2s;
+}
+
+header div.logo {
+    float: right;
+    margin-right: 30px;
+    margin-left: 50px;
+    margin-top: 10px;
+}
+
+header .logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+header .nav {
+    margin-top: 15px;
+    z-index: 1000;
+}
+
+header .nav ul {
+    float: none;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+header .nav ul li {
+    display: inline-block;
+    font-size: 15px;
+}
+
+header .nav ul li a, header .nav ul li span {
+    padding: 0px 8px;
+    color: #832b23;
+    font-weight: 800;
+    transition: all 0.3s ease 0s;
+}
+
+header .nav ul li a:hover, header .nav ul li span:hover {
+    color: #a8534c;
+}
+
+header .nav div.social-media {
+    direction: ltr;
+    float: left;
+    margin: -60px 2vw;
+}
+
+header .social-media a {
+    display: inline-block;
+    font-size: 22px;
+    background: transparent;
+    color: #333333;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    transition: all 0.3s ease-in 0s;
+}
+
+header .social-media a:hover {
+    background: #87342c;
+    color: #ffffff;
+}
+
+header.sticky{
+    padding: 0px;
+    box-shadow: 0px 0px 15px -5px #000000;
+    background: #d0c493;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: #832b23;
+    float: right;
+    line-height: 80px;
+    margin-top: 10px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+@media (max-width: 1006px) {
+    header div.logo {
+        float: left;
+        margin-left: 5%;
+    }
+    header nav ul li a {
+        font-size: 18px;
+    }
+    header {
+        position: fixed;
+    }
+    .checkbtn {
+        display: block;
+    }
+    header .nav {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 10vh;
+        right: -100%;
+        text-align: center;
+        transition: all 0.3s ease-in-out;
+    }
+    header .nav div.social-media {
+        direction: ltr;
+        float: none;
+        margin: 0px 0px;
+    }    
+    header .nav ul li {
+        display: block;
+        margin: 40px 0px;
+        /* line-height: 50px; */
+    }
+    nav ul li a {
+        font-size: 16px;
+    }
+    #check:checked ~ .nav {
+        right: 0;
+        background: #d0c493;
+    }
+}
+
+@media (max-width: 414px) {
+    header .nav ul li a {
+        font-size: 20px;
+    }
+    header .social-media a {
+        display: inline-block;
+        font-size: 35px;
+        background: transparent;
+        color: #333333;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        border-radius: 50%;
+        text-align: center;
+        transition: all 0.3s ease-in 0s;
+    }
+    header .social-media a:hover {
+        background: #87342c;
+        color: #ffffff;
+    }
+}
+@media (max-width:375px){
+    header .nav {
+        top: 10%;
+    }
+}

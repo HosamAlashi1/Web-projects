@@ -1,0 +1,165 @@
+/* Meals Section */
+
+.meals {
+    text-align: center;
+}
+
+section.r-meals h2 , section.meals h2{
+    position: relative;
+    color: #333333;
+    font-weight: 700;
+    font-size: 28px;
+    border-bottom: 4px solid #d3d3d3;
+    margin-bottom: 40px;
+}
+
+section.r-meals h2:after ,section.meals h2:after{
+    position: absolute;
+    content: "";
+    display: block;
+    width: 34%;
+    right: 33%;
+    left: 50%;
+    height: 4.3px;
+    background: #333333;
+}
+.meals .meals-choices button {
+    display: inline-block;
+    width: 22%;
+    position: relative;
+    margin: 0 5%;
+    font-weight: 600;
+    color: #333333;
+}
+
+.meals .meals-choices button.active{
+    color: #832b23;
+}
+
+
+.meals .meals-choices button:after {
+    position: absolute;
+    display: block;
+    content: "";
+    right: -30%;
+    /* left: -10; */
+    width: 160%;
+    height: 3px;
+    margin-top: 20px;
+    background-color: #ebebeb;
+    transition: all 0.3s ease 0s;
+}
+.meals .meals-choices button.active:after {
+    background-color: #832b23;
+    box-sizing: border-box;
+    transition: all 0.5s ease 0s;
+}
+.restaurant .restaurant-item, .breakfast .breakfast-item, .lunch .lunch-item {
+    float: right;
+    width: calc(33% - 20px);
+    margin: 0px 10px;
+    background: #ffffff;
+    overflow: hidden;
+}
+/* @media (max-width : 662px){
+     
+} */
+.restaurant .restaurant-item img, .breakfast .breakfast-item img, .lunch .lunch-item img {
+    max-width: 100%;
+    height: 250px;
+    /* max-height: 250px; */
+}
+@media (max-width:1100px){
+    .restaurant .restaurant-item img, .breakfast .breakfast-item img, .lunch .lunch-item img {
+        max-width: 100%;
+        height: 200px;
+    }
+    .restaurant .restaurant-item, .breakfast .breakfast-item, .lunch .lunch-item {
+        float: right;
+        width: calc(50% - 20px);
+        margin: 0px 10px;
+        background: #ffffff;
+        overflow: hidden;
+    } 
+}
+@media (max-width:600px){
+    .restaurant .restaurant-item img, .breakfast .breakfast-item img, .lunch .lunch-item img {
+        max-width: 100%;
+        height: 200px;
+    }
+    .restaurant .restaurant-item, .breakfast .breakfast-item, .lunch .lunch-item {
+        /* float: right; */
+        width: 100%;
+        margin: 10px 0px;
+        background: #ffffff;
+        overflow: hidden;
+    }
+    .meals .meals-choices button {
+        font-size: 16px;
+    }
+}
+.restaurant-item img:hover, .breakfast-item img:hover, .lunch-item img:hover {
+    opacity: 0.8;
+    transition: all 0.3s ease 0s;
+}
+
+.restaurant-item-description, .breakfast-item-description, .lunch-item-description {
+    padding-bottom: 40px;
+}
+
+span.meal-name, span.meal-price, span.availability{
+    display: block;
+    font-weight: 600;
+    font-size: 15px;
+    color: #333333;
+}
+@media (max-width:1175px){
+    span.meal-name, span.meal-price, span.availability{
+        display: inline-block;
+        font-weight: 600;
+        font-size: 14px;
+        color: #333333;
+    }   
+}
+span.meal-name, span.availability{
+    float: right;
+    margin-right: 10px;
+}
+
+span.availability:before{
+    display: inline-block;
+    content: "";
+    width: 10px;
+    height: 10px;
+    margin-left: 8px;
+    background: #008800;
+    border-radius: 50%;
+}
+
+span.meal-price, .stars-rating {
+    float: left;
+    margin-left: 10px;
+}
+
+.stars-rating {
+    direction: ltr;
+}
+
+.stars-rating span {
+    color: #333333;
+}
+
+.stars-rating .checked {
+    color: orange;
+}
+
+.restaurant, .breakfast, .lunch {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+.meals-menu .restaurant .stars-rating span, .meals-menu .breakfast .stars-rating span, .meals-menu .lunch .stars-rating span {
+    cursor: pointer;
+}

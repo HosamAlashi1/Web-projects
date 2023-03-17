@@ -1,0 +1,2 @@
+Projects that have name >> start and project 1 is a small project and not clean code because when
+I created it I was a noob

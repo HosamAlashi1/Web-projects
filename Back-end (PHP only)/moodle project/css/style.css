@@ -1,0 +1,89 @@
+/* General Styles */
+html{
+    direction: rtl; /* right to left */
+}
+body {
+    font-family: 'Changa', sans-serif;
+    background: #f2f2f2;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    font-family: 'Changa', 'sans-serif';
+    outline: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+textarea {
+    resize: none;
+}
+
+/* Common Styles */
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.container {
+    width: 78%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.pd-y {
+    padding: 60px 0px;
+}
+
+/* Scroll To Top */
+
+.scrollToTopBtn {
+    background-color: #821517;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 48px;
+    height: 48px;
+    width: 48px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 100;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 0.5s ease;
+}
+
+.showBtn {
+    opacity: 1;
+    transform: translateY(0);
+}
